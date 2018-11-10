@@ -17,6 +17,8 @@
 
 # definiere Variablen
 
+# lese Datensatz neu ein (und somit alle Daten einheitlich)
+
 # breche Verbrauch auf Tage herunter & rechne auf Monat hoch
 #
 # nötige Berechnungen:
