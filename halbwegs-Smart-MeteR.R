@@ -1,6 +1,6 @@
 # Ziel: Ein R-Script bauen, das mit dem aktuellen Datum und dem Zählerstand
 # aufgerufen werden kann, beide Datenpunkte einer Tabelle hinzufügt
-# und in ein Diagramm den Stromverbrauchs gegen die Zeit aufträgt.
+# und in ein Diagramm den Stromverbrauch gegen die Zeit aufträgt.
 
 # lese Datensatz ein
 # install.packages("readr")
