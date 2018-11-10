@@ -2,8 +2,6 @@
 # aufgerufen werden kann, beide Datenpunkte einer Tabelle hinzufügt
 # und in ein Diagramm den Stromverbrauchs gegen die Zeit aufträgt.
 
-# definiere Variablen
-
 # lese Datensatz ein
 # install.packages("readr")
 
@@ -14,6 +12,10 @@
 # füge weiteren Zählerstand hinzu
 
 # speichere aktualisierte Tabelle als Datei
+### weiteres Ziel: Aus dem bisher erfassten Verbrauch den Abschlag hochrechnen
+# und visualisieren.
+
+# definiere Variablen
 
 # breche Verbrauch auf Tage herunter & rechne auf Monat hoch
 #
