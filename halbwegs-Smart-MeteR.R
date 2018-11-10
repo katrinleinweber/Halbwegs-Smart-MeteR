@@ -12,6 +12,8 @@
 # füge weiteren Zählerstand hinzu
 
 # speichere aktualisierte Tabelle als Datei
+
+
 ### weiteres Ziel: Aus dem bisher erfassten Verbrauch den Abschlag hochrechnen
 # und visualisieren.
 
