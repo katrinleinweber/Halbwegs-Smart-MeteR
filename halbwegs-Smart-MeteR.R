@@ -27,6 +27,7 @@
 # 3. [ ] Verbrauch pro Tag
 # 4. [ ] Abschlag aus Grundpreis, kWh/Tag * 30 * Preis/kWh
 
+# install.packages("dplyr")
 
 # visualisiere Hochrechnung & hübsche auf
 
