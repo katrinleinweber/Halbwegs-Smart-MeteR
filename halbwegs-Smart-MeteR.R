@@ -39,7 +39,20 @@ Stromabschlag_EUR_pro_Monat <- 15
 # 4. realistischer Abschlag aus Grundpreis, kWh/Tag * 30 * Preis/kWh
 
 # install.packages("dplyr")
+library(dplyr)
 
+Abschlag <-
+  mutate(
+    .data = Verbrauch,
+    Intervall_Tage = as.numeric(Datum - lag(Datum)), # oder as.int()
+
+    Strom_kWh_am_Tag = (Strom_kWh - lag(Strom_kWh)) / Intervall_Tage,
+
+    Abschlag_Strom_EUR
+    = Strom_kWh_am_Tag * 30
+    * Strompreis_EUR_pro_kWh
+    + Stromgrundpreis_EUR_pro_Monat
+  )
 
 
 # visualisiere Hochrechnung
