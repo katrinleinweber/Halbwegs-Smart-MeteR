@@ -57,12 +57,16 @@ Abschlag <-
 
 # visualisiere Hochrechnung
 
+ggplot(data = Abschlag, mapping = aes(Datum, y = Abschlag_Strom_EUR)) +
 
   # hochgerechnet auf Monat
+  geom_line() +
 
   # hochgerechnet auf Jahr
+  geom_line(aes(y = mean(Abschlag_Strom_EUR, na.rm = TRUE)))
 
   # tatsächlich
+  geom_line(aes(y = Stromabschlag_EUR_pro_Monat)) +
 
   # aufhübschen (zusätzlich zu linetype & color oben)
 
