@@ -2,20 +2,24 @@
 # aufgerufen werden kann, beide Datenpunkte einer Tabelle hinzufügt
 # und in ein Diagramm den Stromverbrauch gegen die Zeit aufträgt.
 
+# deklariere importierte Pakete zuerst
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+library(readr)
+library(tibble)
+
 # lese Datensatz ein
 # install.packages("readr")
-library(readr)
 Verbrauch <- read_csv(file = "Strom.csv")
 # visualisiere Zählerstand (siehe auch Help > Cheatsheets)
 # install.packages("ggplot2")
-library(ggplot2)
 ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
   geom_point() +
   stat_smooth()
 
 # füge weiteren Zählerstand zur Tabelle hinzu
 # install.packages("tibble")
-library(tibble)
 Verbrauch <- add_row(.data = Verbrauch,
                      Datum = Sys.Date(), # oder "YYYY-MM-DD" selbst eintragen
                      Strom_kWh = 278.9)
@@ -39,7 +43,6 @@ Stromabschlag_EUR_pro_Monat <- 15
 # 4. realistischer Abschlag aus Grundpreis, kWh/Tag * 30 * Preis/kWh
 
 # install.packages("dplyr")
-library(dplyr)
 
 Abschlag <-
   mutate(
