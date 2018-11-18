@@ -28,6 +28,9 @@ write_csv(x = Verbrauch, path = "Strom.csv")
 # und visualisieren.
 
 # definiere Variablen (im Vertragssinne eher "Konstanten")
+Strompreis_EUR_pro_kWh <- 0.25
+Stromgrundpreis_EUR_pro_Monat <- 10
+Stromabschlag_EUR_pro_Monat <- 15
 
 # breche Verbrauch auf Tage herunter & rechne auf Monat hoch
 # 1. aus den Datumsangaben ein Intervall
