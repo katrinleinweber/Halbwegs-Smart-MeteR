@@ -10,7 +10,8 @@ Verbrauch <- read_csv(file = "Strom.csv")
 # install.packages("ggplot2")
 library(ggplot2)
 ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
-  geom_point()
+  geom_point() +
+  stat_smooth()
 
 # füge weiteren Zählerstand zur Tabelle hinzu
 # install.packages("tibble")
