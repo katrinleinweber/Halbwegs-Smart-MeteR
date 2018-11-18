@@ -4,6 +4,8 @@
 
 # lese Datensatz ein
 # install.packages("readr")
+library(readr)
+Verbrauch <- read_csv(file = "Strom.csv")
 # visualisiere Zählerstand (siehe auch Help > Cheatsheets)
 # install.packages("ggplot2")
 
