@@ -8,6 +8,9 @@ library(readr)
 Verbrauch <- read_csv(file = "Strom.csv")
 # visualisiere Zählerstand (siehe auch Help > Cheatsheets)
 # install.packages("ggplot2")
+library(ggplot2)
+ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
+  geom_point()
 
 # füge weiteren Zählerstand zur Tabelle hinzu
 # install.packages("tibble")
