@@ -21,6 +21,7 @@ Verbrauch <- add_row(.data = Verbrauch,
                      Strom_kWh = 278.9)
 
 # speichere aktualisierte Tabelle als Datei
+write_csv(x = Verbrauch, path = "Strom.csv")
 
 
 ### weiteres Ziel: Aus dem bisher erfassten Verbrauch den Abschlag hochrechnen
