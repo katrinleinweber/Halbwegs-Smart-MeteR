@@ -2,6 +2,9 @@
 # aufgerufen werden kann, beide Datenpunkte einer Tabelle hinzufügt
 # und in ein Diagramm den Stromverbrauch gegen die Zeit aufträgt.
 
+# Zählerstand
+abgelesen <- 278.9
+
 # deklariere importierte Pakete zuerst
 library(dplyr)
 library(ggplot2)
@@ -22,7 +25,7 @@ ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
 # install.packages("tibble")
 Verbrauch <- add_row(.data = Verbrauch,
                      Datum = Sys.Date(), # oder "YYYY-MM-DD" selbst eintragen
-                     Strom_kWh = 278.9)
+                     Strom_kWh = abgelesen)
 
 # speichere aktualisierte Tabelle als Datei
 write_csv(x = Verbrauch, path = "Strom.csv")
@@ -91,3 +94,4 @@ ggplot(data = Abschlag, mapping = aes(Datum, y = Abschlag_Strom_EUR)) +
 # Weitere R-Lern-Resourcen
 # - http://exercism.io/languages/r/
 # - https://swcarpentry.github.io/r-novice-gapminder/
+#     Hinweis 1: Wenn Sie mittels "??Sys" die R-Doku durchsuchen, werden Sie
