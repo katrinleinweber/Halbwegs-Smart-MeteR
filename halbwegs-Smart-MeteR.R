@@ -60,15 +60,19 @@ Abschlag <-
 ggplot(data = Abschlag, mapping = aes(Datum, y = Abschlag_Strom_EUR)) +
 
   # hochgerechnet auf Monat
-  geom_line() +
+  geom_line(color = "yellow", linetype = "dotted") +
 
   # hochgerechnet auf Jahr
-  geom_line(aes(y = mean(Abschlag_Strom_EUR, na.rm = TRUE)))
+  geom_line(aes(y = mean(Abschlag_Strom_EUR, na.rm = TRUE)),
+            color = "yellow",
+            linetype = "dashed") +
 
   # tatsächlich
-  geom_line(aes(y = Stromabschlag_EUR_pro_Monat)) +
+  geom_line(aes(y = Stromabschlag_EUR_pro_Monat), color = "yellow") +
 
   # aufhübschen (zusätzlich zu linetype & color oben)
+  theme_dark() +
+  labs(title = "Stromabschlag in €", x = NULL, y = NULL)
 
 ### Eigene Weiterarbeit hieran:
 # 1. einen echten Zählerstand in Strom.csv eintragen (Datumsformat: "YYYY-MM-DD")
