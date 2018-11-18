@@ -39,8 +39,17 @@
 
   # aufhübschen (zusätzlich zu linetype & color oben)
 
-
-### Eigene Weiterarbeit hieran: Beispieldaten aus Strom.csv löschen, dieses die
-# .RProj-Datei regelmäßig öffnen, neuen Zählerstand in add_row(...) eintragen
-# und mittels "Source"-Button ausführen.
-
+### Eigene Weiterarbeit hieran:
+# 1. einen echten Zählerstand in Strom.csv eintragen (Datumsformat: "YYYY-MM-DD")
+# 2. Beispieldaten löschen & Strom.csv speichern
+#
+# Dann: .RProj-Datei regelmäßig öffnen, neuen Zählerstand in add_row(...) eintragen,
+# und Script mittels "Source with Echo"-Button ausführen. Das jeweils aktuelle
+# Diagramm sollte im "Plots"-Tab erscheinen.
+#
+# Weiterentwicklungsideen für dieses Script:
+# https://github.com/katrinleinweber/Halbwegs-Smart-MeteR/issues
+#
+# Weitere R-Lern-Resourcen
+# - http://exercism.io/languages/r/
+# - https://swcarpentry.github.io/r-novice-gapminder/
