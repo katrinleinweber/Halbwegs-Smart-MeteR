@@ -15,6 +15,10 @@ ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
 
 # füge weiteren Zählerstand zur Tabelle hinzu
 # install.packages("tibble")
+library(tibble)
+Verbrauch <- add_row(.data = Verbrauch,
+                     Datum = Sys.Date(), # oder "YYYY-MM-DD" selbst eintragen
+                     Strom_kWh = 278.9)
 
 # speichere aktualisierte Tabelle als Datei
 
