@@ -15,6 +15,7 @@ library(tibble)
 # lese Datensatz ein
 # install.packages("readr")
 Verbrauch <- read_csv(file = "Strom.csv")
+
 # visualisiere Zählerstand (siehe auch Help > Cheatsheets)
 # install.packages("ggplot2")
 ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
@@ -44,9 +45,7 @@ Stromabschlag_EUR_pro_Monat <- 15
 # 2. Stromverbrauch zwischen zwei Zählerständen
 # 3. Stromverbrauch pro Tag
 # 4. realistischer Abschlag aus Grundpreis, kWh/Tag * 30 * Preis/kWh
-
 # install.packages("dplyr")
-
 Abschlag <-
   mutate(
     .data = Verbrauch,
