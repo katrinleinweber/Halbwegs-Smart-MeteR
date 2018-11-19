@@ -16,6 +16,16 @@ library(tibble)
 # install.packages("readr")
 Verbrauch <- read_csv(file = "Strom.csv")
 
+
+# doppelte Eintragungen verhindern
+
+if (Sys.Date() %in% Verbrauch$Datum)
+  warning("Mit heutigem Datum wurde schon ein Zählerstand eingetragen. Keine Duplikate erlaubt! Bitte morgen nochmal versuchen")
+
+if (abgelesen %in% Verbrauch$Strom_kWh)
+  warning("Dieser Zählerstand wurde schon erfasst. Bitte morgen, nächste Woche, oder so neu ablesen.")
+
+
 # visualisiere Zählerstand (siehe auch Help > Cheatsheets)
 # install.packages("ggplot2")
 ggplot(data = Verbrauch, mapping = aes(x = Datum, y = Strom_kWh)) +
